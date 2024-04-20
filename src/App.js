@@ -9,7 +9,7 @@ import Navbar from './component/Navbar';
 
 function App() {
   const [photos, setPhotos] = useState([]);
-
+  const [numberOfCameras, setNumberOfCameras] = useState(0);
   const camera = useRef(null);
   const [image, setImage] = useState(null);
   const [aspectRatio, setAspectRatio] = useState(16/9);
@@ -53,6 +53,8 @@ function App() {
       handleAspectRatioChange = {handleAspectRatioChange}
       takePhoto={takePhoto}
       image = {image}
+      numberOfCameras={numberOfCameras}
+      setNumberOfCameras={setNumberOfCameras}
       />} />
       <Route path='gallery' element={<Gallery photos={photos} />} />
     </Routes >

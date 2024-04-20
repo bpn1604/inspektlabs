@@ -1,10 +1,10 @@
 import React from 'react'
 import { Camera } from "react-camera-pro";
-const CameraComponent = ({camera ,aspectRatio,handleAspectRatioChange , takePhoto ,image }) => {
+const CameraComponent = ({camera ,aspectRatio,handleAspectRatioChange , takePhoto ,image ,setNumberOfCameras,numberOfCameras }) => {
   return (
         <div>
       {/* Render the camera component */}
-      <div style={{marginTop:"20px"}}><Camera ref={camera} aspectRatio={aspectRatio} /></div>
+      <div style={{marginTop:"20px"}}><Camera ref={camera} aspectRatio={aspectRatio} numberOfCamerasCallback={setNumberOfCameras} /></div>
       
 
       <div>
@@ -22,7 +22,13 @@ const CameraComponent = ({camera ,aspectRatio,handleAspectRatioChange , takePhot
 
       {/* Button to take photo */}
       <button onClick={takePhoto} >Take photo</button>
-
+      <button
+        hidden={numberOfCameras <= 1}
+        onClick={() => {
+          console.log(camera.current)
+          camera.current.switchCamera();
+        }}
+      />
       {/* Render the captured image */}
       {image && <img src={image} alt='Taken photo' />}
     </div>

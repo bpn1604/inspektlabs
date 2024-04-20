@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Gallery = ({ photos, onDelete }) => {
+  console.log(photos)
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -12,9 +13,8 @@ const Gallery = ({ photos, onDelete }) => {
   };
 
   const handleDelete = (index) => {
-    if (onDelete) {
-      onDelete(index);
-    }
+    console.log(index)
+    photos.splice(index,1)
   };
 
   return (
