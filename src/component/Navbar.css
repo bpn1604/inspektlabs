@@ -2,7 +2,7 @@
 
 .navbar {
     background-color: #333; /* Navbar background color */
-    color: #fff; /* Text color */
+    color: #9db442; /* Text color */
     padding: 10px 0; /* Padding top and bottom */
   }
   
@@ -10,12 +10,12 @@
     max-width: 1200px; /* Maximum width of the navbar */
     margin: 0 auto; /* Center align the navbar */
     display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Distribute space between elements */
+    justify-content: space-around; /* Distribute space between elements */
     align-items: center; /* Vertically center align items */
   }
   
   .nav-link {
-    color: #fff; /* Text color for links */
+    color: #e8dbe0; /* Text color for links */
     text-decoration: none; /* Remove underline from links */
     font-size: 18px; /* Font size for links */
     margin-right: 20px; /* Margin between links */
@@ -35,8 +35,8 @@
   
   @media (max-width: 576px) {
     .nav-link {
-      font-size: 14px; /* Further decrease font size for even smaller screens */
-      margin-right: 5px; /* Further decrease margin between links */
+      font-size: 14px;
+      margin-right: 5px; 
     }
   }
   

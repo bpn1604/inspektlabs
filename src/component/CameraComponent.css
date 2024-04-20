@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   
   .zoom-button {
@@ -24,7 +25,7 @@
     background-color: #ffca28;
   }
   
-  /* Existing styles... */
+ 
   
 
 .container {
@@ -94,10 +95,22 @@
       flex-direction: column;
     }
   
-    .aspect-ratio-option {
-      margin-right: 0;
+    aspect-ratio-option {
+      display: inline-block;
+      margin-right: 10px; /* Add a margin to separate options */
       margin-bottom: 10px;
-    }
+      padding: 15px; /* Add padding for a cleaner look */
+      border-radius: 8px; /* Add rounded corners for a softer appearance */
+      background-color: #f0f0f0; /* Choose a light background color */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+      transition: all 0.3s ease; /* Add smooth transition for hover effect */
+  
+      /* Add hover effect */
+      transition: background-color 0.3s ease;
+  }
+  .aspect-ratio-option:hover {
+      background-color: #e0e0e0; /* Darken the background color on hover */
+  }
   
     .take-photo-button,
     .toggle-camera-button {
