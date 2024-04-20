@@ -29,6 +29,7 @@ function App() {
   }
   
   const takePhoto = async () => {
+    console.log(camera.current)
     const photo = await camera.current.takePhoto();
     const blob = base64ToBlob(photo);
     console.log(blob)
