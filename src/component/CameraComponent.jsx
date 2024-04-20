@@ -28,7 +28,9 @@ const CameraComponent = ({camera ,aspectRatio,handleAspectRatioChange , takePhot
           console.log(camera.current)
           camera.current.switchCamera();
         }}
-      />
+      >
+        Toggle Camera
+      </button>
       {/* Render the captured image */}
       {image && <img src={image} alt='Taken photo' />}
     </div>
