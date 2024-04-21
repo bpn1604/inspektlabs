@@ -7,7 +7,7 @@ This app is about implementation of front and back camera with different functio
 - [Camera APP](#project-name)
   - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
-  - [foront camera and back camera with different aspect ration , Zoom IN & Zoom Out funcitonality](#features)
+  -  [Features](#features)
   - [Installation](#installation)
   -
 
@@ -17,7 +17,6 @@ This app is about implementation of front and back camera with different functio
 
 ## Features
 
-List the key features of your application. Highlight what makes your project unique or useful. You can use bullet points for better readability.
 
 - zoom in zoom out
 - Different aspect ratio
@@ -29,7 +28,7 @@ Provide step-by-step instructions on how to install and set up your project loca
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/bpn1604/inspektlabs.git
 
 # Navigate to the project directory
 cd your-project
