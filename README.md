@@ -31,7 +31,7 @@ Provide step-by-step instructions on how to install and set up your project loca
 git clone https://github.com/bpn1604/inspektlabs.git
 
 # Navigate to the project directory
-cd your-project
+cd inspectlabs
 
 # Install dependencies
 npm install
