@@ -2,34 +2,33 @@
   margin: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Start from the beginning */
-  gap : 10px;
-  
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .gallery-item {
-  border-radius: 15px;
-  margin-bottom: 20px;
   position: relative;
-  flex-basis: calc(25% - 20px); /* Fixing length for each column */
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  flex-basis: calc(25% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 150px;
 }
 
 @media (max-width: 768px) {
   .gallery-item {
-    flex-basis: calc(50% - 20px); /* 2 items per row on medium screens */
+    flex-basis: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .gallery-item {
-    flex-basis: calc(100% - 20px); /* 1 item per row on small screens */
+    flex-basis: calc(100% - 20px);
   }
 }
 
 .gallery-item img {
   width: 100%;
   display: block;
+  border-radius: 15px;
   transition: transform 0.3s ease;
 }
 
@@ -38,10 +37,12 @@
 }
 
 .delete-button {
-  position: relative;
-  top: 0px; /* Adjust as needed */
-  right: -125px; /* Adjust as needed */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgba(178, 39, 39, 0.8);
+  color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -51,5 +52,4 @@
 
 .delete-button:hover {
   background-color: rgba(255, 0, 0, 0.8);
-  color: white;
 }

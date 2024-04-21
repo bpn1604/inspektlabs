@@ -1,130 +1,133 @@
 /* CameraComponent.css */
-/* CameraComponent.css */
 
 /* Existing styles... */
 
+/* Zoom buttons */
 .zoom-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-  
-  .zoom-button {
-    background-color: #ffc107;
-    color: black;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .zoom-button:hover {
-    background-color: #ffca28;
-  }
-  
- 
-  
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
+.zoom-button {
+  background-color: #ffc107;
+  color: black;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.zoom-button:hover {
+  background-color: #ffca28;
+}
+
+/* Container */
 .container {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Camera wrapper */
+.camera-wrapper {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 50px;
+}
+
+.camera {
+  width: 100%;
+  height: auto;
+}
+
+/* Aspect ratio options */
+.aspect-ratio-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.aspect-ratio-option {
+  margin-right: 10px;
+}
+
+/* Take photo button and toggle camera button */
+.take-photo-button,
+.toggle-camera-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.take-photo-button:hover,
+.toggle-camera-button:hover {
+  background-color: #0056b3;
+}
+
+.taken-photo {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .camera-wrapper {
+    max-width: 500px;
+  }
+
+  .aspect-ratio-options {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
   }
-  
-  .camera-wrapper {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 50px;
-  }
-  
-  .camera {
-    width: 100%;
-    height: auto;
-  }
-  
-  .aspect-ratio-options {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
+
   .aspect-ratio-option {
-    margin-right: 10px;
-  }
-  
-  .take-photo-button,
-  .toggle-camera-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin: 5px; /* Adjust margin for better spacing */
+    padding: 10px 15px; /* Adjust padding for better appearance */
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
   }
-  
-  .take-photo-button:hover,
-  .toggle-camera-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .taken-photo {
-    width: 100%;
-    max-width: 400px;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    .camera-wrapper {
-      max-width: 500px;
-    }
-  
-    .aspect-ratio-options {
-      flex-direction: column;
-    }
-  
-    aspect-ratio-option {
-      display: inline-block;
-      margin-right: 10px; /* Add a margin to separate options */
-      margin-bottom: 10px;
-      padding: 15px; /* Add padding for a cleaner look */
-      border-radius: 8px; /* Add rounded corners for a softer appearance */
-      background-color: #f0f0f0; /* Choose a light background color */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-      transition: all 0.3s ease; /* Add smooth transition for hover effect */
-  
-      /* Add hover effect */
-      transition: background-color 0.3s ease;
-  }
+
   .aspect-ratio-option:hover {
-      background-color: #e0e0e0; /* Darken the background color on hover */
+    background-color: #e0e0e0;
   }
-  
-    .take-photo-button,
-    .toggle-camera-button {
-      margin-top: 10px;
-    }
+
+  .take-photo-button,
+  .toggle-camera-button {
+    margin-top: 20px; /* Increase margin for better spacing */
   }
-  
-  @media (max-width: 576px) {
-    .container {
-      padding: 5px;
-    }
-  
-    .camera-wrapper {
-      max-width: 400px;
-    }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 5px;
   }
-  
+
+  .camera-wrapper {
+    max-width: 400px;
+    margin: 20px;
+  }
+
+  .take-photo-button,
+  .toggle-camera-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
