@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Import CSS file
+import './Navbar.css'; 
 
 function Navbar() {
   return (
-    <nav className="navbar"> {/* Apply the "navbar" class */}
+    <nav className="navbar"> 
       <div className="navbar-container">
-        <Link to="/" className="nav-link">Camera</Link> {/* Apply the "nav-link" class */}
-        <Link to="/gallery" className="nav-link">Gallery</Link> {/* Apply the "nav-link" class */}
+        <Link to="/" className="nav-link">Camera</Link> 
+        <Link to="/gallery" className="nav-link">Gallery</Link>
       </div>
     </nav>
   );

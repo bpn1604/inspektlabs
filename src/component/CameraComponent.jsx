@@ -1,17 +1,17 @@
 import React, { useState, useRef } from 'react';
 import { Camera } from "react-camera-pro";
-import './CameraComponent.css'; // Import CSS file
+import './CameraComponent.css';
 
 const CameraComponent = ({ camera, aspectRatio, handleAspectRatioChange, takePhoto, image, setNumberOfCameras, numberOfCameras }) => {
   const [zoomLevel, setZoomLevel] = useState(1);
   const cameraWrapperRef = useRef(null);
 
   const zoomIn = () => {
-    setZoomLevel(prevZoom => Math.min(prevZoom + 0.1, 1.3)); // Limit zoom level to 2x
+    setZoomLevel(prevZoom => Math.min(prevZoom + 0.1, 1.3));
   };
 
   const zoomOut = () => {
-    setZoomLevel(prevZoom => Math.max(prevZoom - 0.1, 1)); // Limit zoom level to 1x
+    setZoomLevel(prevZoom => Math.max(prevZoom - 0.1, 1));
   };
 
   const cameraStyle = {
