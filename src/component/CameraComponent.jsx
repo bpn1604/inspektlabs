@@ -4,7 +4,7 @@ import './CameraComponent.css';
 
 const CameraComponent = ({ camera, aspectRatio, handleAspectRatioChange, takePhoto, image, setNumberOfCameras, numberOfCameras }) => {
   const [zoomLevel, setZoomLevel] = useState(1);
-  const cameraWrapperRef = useRef(null);
+  const cameraRef = useRef(null);
 
   const zoomIn = () => {
     setZoomLevel(prevZoom => Math.min(prevZoom + 0.1, 1.3));
@@ -20,8 +20,10 @@ const CameraComponent = ({ camera, aspectRatio, handleAspectRatioChange, takePho
 
   return (
     <div className="container">
-      <div ref={cameraWrapperRef} className="camera-wrapper" style={cameraStyle} margin="550px">
-        <Camera ref={camera} aspectRatio={aspectRatio} numberOfCamerasCallback={setNumberOfCameras} className="camera" />
+      <div className="camera-wrapper">
+        <div style={cameraStyle}>
+          <Camera ref={camera} aspectRatio={aspectRatio} numberOfCamerasCallback={setNumberOfCameras} className="camera" />
+        </div>
       </div>
 
       <div className="aspect-ratio-options">
@@ -35,14 +37,14 @@ const CameraComponent = ({ camera, aspectRatio, handleAspectRatioChange, takePho
       </div>
 
       <button onClick={takePhoto} className="take-photo-button">Take photo</button>
-      <button hidden={numberOfCameras <= 1} onClick={() => { camera.current.switchCamera(); }} className="toggle-camera-button">Toggle Camera</button>
+      <button hidden={numberOfCameras <= 1} onClick={() => { cameraRef.current.switchCamera(); }} className="toggle-camera-button">Toggle Camera</button>
 
       <div className="zoom-buttons">
         <button onClick={zoomIn} className="zoom-button">+</button>
         <button onClick={zoomOut} className="zoom-button">-</button>
       </div>
 
-      {image && <img src={image} alt='Taken photo' className="taken-photo" />}
+      
     </div>
   );
 }

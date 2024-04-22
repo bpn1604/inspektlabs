@@ -13,8 +13,10 @@ function App() {
   const camera = useRef(null);
   const [image, setImage] = useState(null);
   const [aspectRatio, setAspectRatio] = useState(16/9);
+  console.log(camera)
   function base64ToBlob(base64String) {
     // Split the base64 string into two parts
+    
     const parts = base64String.split(';base64,');
     const contentType = parts[0].split(':')[1];
     const raw = window.atob(parts[1]);

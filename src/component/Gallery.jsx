@@ -14,10 +14,11 @@ const Gallery = ({ photos }) => {
   };
 
   const handleDelete = (index) => {
-    photos.splice(index,1)
+    
     const updatedPhotos = [...photosArray];
     updatedPhotos.splice(index, 1);
     setPhotosArray(updatedPhotos);
+    photos.splice(index,1)
   };
 
   return (
