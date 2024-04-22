@@ -9,7 +9,7 @@ This app is about implementation of front and back camera with different functio
   - [Demo](#demo)
   -  [Features](#features)
   - [Installation](#installation)
-  -
+  
 
 ## Demo
 
