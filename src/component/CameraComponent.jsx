@@ -37,7 +37,7 @@ const CameraComponent = ({ camera, aspectRatio, handleAspectRatioChange, takePho
       </div>
 
       <button onClick={takePhoto} className="take-photo-button">Take photo</button>
-      <button hidden={numberOfCameras <= 1} onClick={() => { cameraRef.current.switchCamera() }} className="toggle-camera-button">Toggle Camera</button>
+      <button hidden={numberOfCameras <= 1} onClick={() => { camera.current.switchCamera() }} className="toggle-camera-button">Toggle Camera</button>
 
       <div className="zoom-buttons">
         <button onClick={zoomIn} className="zoom-button">+</button>
